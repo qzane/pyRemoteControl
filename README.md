@@ -43,11 +43,15 @@ qzane@live.com
 ## net.py
 * encode_byte,decode_byte: 加密功能的接口，输入输出均为二进制串，默认采用Fernet加密算法
 * Net() 类为threading.Thread的继承类，在新线程提供网络通信。线程间的数据交换采用两个Queue队列实现。网络部分使用socket的TCP实现。
+
+
 ## RemoteControl.py
 * 使用上述Net模块，通过应用层协议进行网络连接
 * Remote: 控制类，包括了主控端以及被控端。
 * Remote.contr: 主控端程序，包括远程桌面图像的显示以及鼠标控制命令的发送
 * Remote.b_contr: 被控端程序，包括桌面截图、图像压缩以及鼠标控制的功能
+
+
 ## 网络协议说明
 1. 应用层:<br\>
     格式: |type|data|<br\>
